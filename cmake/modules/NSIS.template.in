@@ -53,9 +53,9 @@ Var StartMenuGroup
 # Installer attributes
 OutFile "@CPACK_TOPLEVEL_DIRECTORY@/@CPACK_OUTPUT_FILE_NAME@"
 !if "@CPACK_SYSTEM_NAME@" == "x86_64-w64-mingw32"
-InstallDir $PROGRAMFILES64\Dogecash
+InstallDir $PROGRAMFILES64\dogd
 !else
-InstallDir $PROGRAMFILES\Dogecash
+InstallDir $PROGRAMFILES\dogd
 !endif
 CRCCheck on
 XPStyle on
@@ -108,7 +108,7 @@ Section -post SEC0001
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
     WriteRegStr HKCR "@CPACK_PACKAGE_NAME@" "URL Protocol" ""
-    WriteRegStr HKCR "@CPACK_PACKAGE_NAME@" "" "URL:Dogecash"
+    WriteRegStr HKCR "@CPACK_PACKAGE_NAME@" "" "URL:dogd"
     WriteRegStr HKCR "@CPACK_PACKAGE_NAME@\DefaultIcon" "" "$INSTDIR\${BITCOIN_GUI_NAME}"
     WriteRegStr HKCR "@CPACK_PACKAGE_NAME@\shell\open\command" "" '"$INSTDIR\${BITCOIN_GUI_NAME}" "%1"'
 SectionEnd
@@ -141,7 +141,7 @@ Section -un.post UNSEC0001
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall $(^Name).lnk"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\@CPACK_NSIS_DISPLAY_NAME@ (testnet).lnk"
-    Delete /REBOOTOK "$SMSTARTUP\Dogecash.lnk"
+    Delete /REBOOTOK "$SMSTARTUP\dogd.lnk"
     Delete /REBOOTOK "$INSTDIR\uninstall.exe"
     Delete /REBOOTOK "$INSTDIR\debug.log"
     Delete /REBOOTOK "$INSTDIR\db.log"

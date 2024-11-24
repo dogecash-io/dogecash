@@ -47,7 +47,7 @@ rpcport=4000
 
 ## Configuration File Path
 
-The configuration file is not automatically created; you can create it using your favorite text editor. By default, the configuration file name is `dogecoin.conf` and it is located in the Dogecash data directory, but both the Dogecash data directory and the configuration file path may be changed using the `-datadir` and `-conf` command-line options.
+The configuration file is not automatically created; you can create it using your favorite text editor. By default, the configuration file name is `dogecoin.conf` and it is located in the dogd data directory, but both the dogd data directory and the configuration file path may be changed using the `-datadir` and `-conf` command-line options.
 
 The `includeconf=<file>` option in the `dogecoin.conf` file can be used to include additional configuration files.
 
@@ -55,8 +55,8 @@ The `includeconf=<file>` option in the `dogecoin.conf` file can be used to inclu
 
 Operating System | Data Directory | Example Path
 -- | -- | --
-Windows | `%APPDATA%\Dogecash\` | `C:\Users\username\AppData\Roaming\Dogecash\dogecoin.conf`
-Linux | `$HOME/.dogecash/` | `/home/username/.dogecash/dogecoin.conf`
-macOS | `$HOME/Library/Application Support/Dogecash/` | `/Users/username/Library/Application Support/Dogecash/dogecoin.conf`
+Windows | `%APPDATA%\dogd\` | `C:\Users\username\AppData\Roaming\dogd\dogecoin.conf`
+Linux | `$HOME/.dogd/` | `/home/username/.dogd/dogecoin.conf`
+macOS | `$HOME/Library/Application Support/dogd/` | `/Users/username/Library/Application Support/dogd/dogecoin.conf`
 
 You can find an example dogecoin.conf file in [contrib/debian/examples/dogecoin.conf](../contrib/debian/examples/dogecoin.conf).

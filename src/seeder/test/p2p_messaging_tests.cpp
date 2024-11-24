@@ -77,7 +77,7 @@ BOOST_AUTO_TEST_CASE(process_version_msg) {
     uint64_t addr_to_services = vAddr[0].nServices;
     CService addr_from;
     uint64_t nonce = 0;
-    std::string user_agent = "/Dogecash:0.0.0(seeder)/";
+    std::string user_agent = "/dogd:0.0.0(seeder)/";
 
     // Don't include the time in CAddress serialization. See D14753.
     versionMessage << INIT_PROTO_VERSION << serviceflags << GetTime()

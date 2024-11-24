@@ -1,6 +1,6 @@
-# Support for Output Descriptors in Dogecash
+# Support for Output Descriptors in dogd
 
-Since Dogecash v0.20.7, there is support for Output Descriptors. This is a
+Since dogd v0.20.7, there is support for Output Descriptors. This is a
 simple language which can be used to describe collections of output scripts.
 Supporting RPCs are:
 - `scantxoutset` takes as input descriptors to scan for, and also reports
@@ -174,7 +174,7 @@ steps, or for dumping wallet descriptors including private key material.
 ### Compatibility with old wallets
 
 In order to easily represent the sets of scripts currently supported by
-existing Dogecash wallets, a convenience function `combo` is provided,
+existing dogd wallets, a convenience function `combo` is provided,
 which takes as input a public key, and describes a set of P2PK and P2PKH
 scripts for that key.
 
@@ -190,7 +190,7 @@ be detected in descriptors up to 501 characters, and up to 3 errors in longer
 ones. For larger numbers of errors, or other types of errors, there is a
 roughly 1 in a trillion chance of not detecting the errors.
 
-All RPCs in Dogecash will include the checksum in their output. Only
+All RPCs in dogd will include the checksum in their output. Only
 certain RPCs require checksums on input, including `deriveaddress` and
 `importmulti`. The checksum for a descriptor without one can be computed
 using the `getdescriptorinfo` RPC.

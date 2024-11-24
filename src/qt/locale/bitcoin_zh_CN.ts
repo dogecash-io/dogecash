@@ -3024,8 +3024,8 @@
         <translation>无法启动HTTP服务，查看日志获取更多信息</translation>
     </message>
     <message>
-        <source>Dogecash</source>
-        <translation>Dogecash</translation>
+        <source>dogd</source>
+        <translation>dogd</translation>
     </message>
     <message>
         <source>The %s developers</source>

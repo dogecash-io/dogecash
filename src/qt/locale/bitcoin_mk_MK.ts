@@ -578,7 +578,7 @@
         <translation>Опции:</translation>
     </message>
     <message>
-        <source>Dogecash</source>
+        <source>dogd</source>
         <translation>Биткоин ABC</translation>
     </message>
     <message>

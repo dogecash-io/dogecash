@@ -30,19 +30,19 @@ If you want to build the disk image with `ninja osx-dmg` (.dmg / optional), you 
 
     brew install librsvg
 
-Build Dogecash
+Build dogd
 -----------------
 
 Before you start building, please make sure that your compiler supports C++17.
 
-1. Clone the Dogecash source code and cd into `bitcoin-abc`
+1. Clone the dogd source code and cd into `bitcoin-abc`
 
         git clone https://github.com/Bitcoin-ABC/bitcoin-abc.git
         cd bitcoin-abc
 
-2.  Build Dogecash:
+2.  Build dogd:
 
-    Configure and build the headless Dogecash binaries as well as the GUI.
+    Configure and build the headless dogd binaries as well as the GUI.
 
     You can disable the GUI build by passing `-DBUILD_BITCOIN_QT=OFF` to cmake.
 
@@ -63,7 +63,7 @@ Before you start building, please make sure that your compiler supports C++17.
 
 Disable-wallet mode
 --------------------
-When the intention is to run only a P2P node without a wallet, Dogecash may be compiled in
+When the intention is to run only a P2P node without a wallet, dogd may be compiled in
 disable-wallet mode with:
 
     cmake -GNinja .. -DBUILD_BITCOIN_WALLET=OFF
@@ -73,7 +73,7 @@ Mining is also possible in disable-wallet mode using the `getblocktemplate` RPC 
 Running
 -------
 
-Dogecash is now available at `./src/dogecoind`
+dogd is now available at `./src/dogecoind`
 
 Before running, it's recommended that you create an RPC configuration file:
 

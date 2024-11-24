@@ -1,4 +1,4 @@
-# Dogecash file system
+# dogd file system
 
 **Contents**
 
@@ -16,15 +16,15 @@
 
 ## Data directory location
 
-The data directory is the default location where the Dogecash files are stored.
+The data directory is the default location where the dogd files are stored.
 
 1. The default data directory paths for supported platforms are:
 
 Platform | Data directory path
 ---------|--------------------
-Linux    | `$HOME/.dogecash/`
-macOS    | `$HOME/Library/Application Support/Dogecash/`
-Windows  | `%APPDATA%\Dogecash\` <sup>[\[1\]](#note1)</sup>
+Linux    | `$HOME/.dogd/`
+macOS    | `$HOME/Library/Application Support/dogd/`
+Windows  | `%APPDATA%\dogd\` <sup>[\[1\]](#note1)</sup>
 
 2. The non-default data directory path can be specified by `-datadir` option.
 
@@ -92,7 +92,7 @@ Subdirectory | File(s)           | Description
 
 ## Legacy subdirectories and files
 
-These subdirectories and files are no longer used by the Dogecash:
+These subdirectories and files are no longer used by the dogd:
 
 Path           | Description | Repository notes
 ---------------|-------------|-----------------

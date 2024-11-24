@@ -1,5 +1,5 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: Dogecash
+Upstream-Name: dogd
 Upstream-Contact: helpdesk@bitcoinabc.org
 Source: https://github.com/Bitcoin-ABC/bitcoin-abc
 

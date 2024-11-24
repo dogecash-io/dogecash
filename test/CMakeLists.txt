@@ -61,7 +61,7 @@ function(add_functional_test_check TARGET DESCRIPTION)
 		TEST_COMMAND
 			"${Python_EXECUTABLE}"
 			./functional/test_runner.py
-			"--testsuitename=Dogecash ${DESCRIPTION}"
+			"--testsuitename=dogd ${DESCRIPTION}"
 			${JUNIT_OUTPUT}
 			${EXTENDED_TIMEOUT}
 			${ARGN}

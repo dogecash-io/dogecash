@@ -936,8 +936,8 @@
         <translation>Dirbti fone kaip šešėlyje ir priimti komandas</translation>
     </message>
     <message>
-        <source>Dogecash</source>
-        <translation>Dogecash</translation>
+        <source>dogd</source>
+        <translation>dogd</translation>
     </message>
     <message>
         <source>Error opening block database</source>

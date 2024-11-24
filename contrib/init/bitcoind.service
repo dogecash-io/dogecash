@@ -3,10 +3,10 @@ Description=eCash node
 After=network.target
 
 [Service]
-ExecStart=%h/bitcoin-abc/bin/dogecoind -daemonwait -conf=%h/.dogecash/dogecoin.conf -pid=%h/.dogecash/dogecoind.pid
-ExecStopPost=-/bin/bash -c 'mv %h/.dogecash/debug.log %h/.dogecash/debug_$(date +%%Y%%m%%d%%H%%M%%S).log'
+ExecStart=%h/bitcoin-abc/bin/dogecoind -daemonwait -conf=%h/.dogd/dogecoin.conf -pid=%h/.dogd/dogecoind.pid
+ExecStopPost=-/bin/bash -c 'mv %h/.dogd/debug.log %h/.dogd/debug_$(date +%%Y%%m%%d%%H%%M%%S).log'
 Type=forking
-PIDFile=%h/.dogecash/dogecoind.pid
+PIDFile=%h/.dogd/dogecoind.pid
 Restart=unless-stopped
 RestartSec=5
 StartLimitInterval=10

@@ -1,6 +1,6 @@
-# User-space, Statically Defined Tracing (USDT) for Dogecash
+# User-space, Statically Defined Tracing (USDT) for dogd
 
-Dogecash includes statically defined tracepoints to allow for more
+dogd includes statically defined tracepoints to allow for more
 observability during development, debugging, code review, and production usage.
 These tracepoints make it possible to keep track of custom statistics and
 enable detailed monitoring of otherwise hidden internals. They have
@@ -112,7 +112,7 @@ Arguments passed:
 
 The following tracepoints cover the in-memory UTXO cache. UTXOs are, for example,
 added to and removed (spent) from the cache when we connect a new block.
-**Note**: Dogecash uses temporary clones of the _main_ UTXO cache
+**Note**: dogd uses temporary clones of the _main_ UTXO cache
 (`chainstate.CoinsTip()`). For example, the RPCs `generateblock` and
 `getblocktemplate` call `TestBlockValidity()`, which applies the UTXO set
 changes to a temporary cache. Similarly, mempool consistency checks, which are
@@ -168,7 +168,7 @@ Arguments passed:
 4. Value of the coin as `pointer to unsigned chars` (e.g. "123456.78 XEC")
 5. If the coin is a coinbase as `bool`
 
-## Adding tracepoints to Dogecash
+## Adding tracepoints to dogd
 
 To add a new tracepoint, `#include <util/trace.h>` in the compilation unit where
 the tracepoint is inserted. Use one of the `TRACEx` macros listed below
@@ -268,7 +268,7 @@ USDT support.
 
 ### GDB - GNU Project Debugger
 
-To list probes in Dogecash, use `info probes` in `gdb`:
+To list probes in dogd, use `info probes` in `gdb`:
 
 ```
 $ gdb ./src/dogecoind
@@ -283,7 +283,7 @@ stap validation block_connected  0x00000000002fb10c /src/dogecoind
 
 ### With `readelf`
 
-The `readelf` tool can be used to display the USDT tracepoints in Dogecash.
+The `readelf` tool can be used to display the USDT tracepoints in dogd.
 Look for the notes with the description `NT_STAPSDT`.
 
 ```

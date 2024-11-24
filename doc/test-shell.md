@@ -22,9 +22,9 @@ user inputs. Such environments include the Python3 command line interpreter or
 * Python3
 * `dogecoind` built in the same repository as the `TestShell`.
 
-## 2. Importing `TestShell` from the Dogecash repository
+## 2. Importing `TestShell` from the dogd repository
 
-We can import the `TestShell` by adding the path of the Dogecash
+We can import the `TestShell` by adding the path of the dogd
 `test_framework` module to the beginning of the PATH variable, and then
 importing the `TestShell` class from the `test_shell` sub-package.
 

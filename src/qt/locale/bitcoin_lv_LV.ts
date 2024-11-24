@@ -1124,8 +1124,8 @@
         <translation>Darbināt fonā kā servisu un pieņemt komandas</translation>
     </message>
     <message>
-        <source>Dogecash</source>
-        <translation>Dogecash</translation>
+        <source>dogd</source>
+        <translation>dogd</translation>
     </message>
     <message>
         <source>&lt;category&gt; can be:</source>

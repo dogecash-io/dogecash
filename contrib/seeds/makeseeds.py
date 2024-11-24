@@ -26,8 +26,8 @@ PATTERN_IPV4 = re.compile(r"^((\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})):(\d+)$
 PATTERN_IPV6 = re.compile(r"^\[([0-9a-z:]+)\]:(\d+)$")
 PATTERN_ONION = re.compile(r"^([abcdefghijklmnopqrstuvwxyz234567]{16}\.onion):(\d+)$")
 
-# Used to only select nodes with a user agent string compatible with Dogecash.
-PATTERN_AGENT = re.compile(r"^(/Dogecash:0\.(1)\.(.+)/)")
+# Used to only select nodes with a user agent string compatible with dogd.
+PATTERN_AGENT = re.compile(r"^(/dogd:0\.(1)\.(.+)/)")
 
 
 def parseline(line: str) -> Union[dict, None]:

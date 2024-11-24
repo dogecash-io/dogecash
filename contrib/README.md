@@ -23,7 +23,7 @@ Contains files used to package dogecoind/dogecoin-qt
 for Debian-based Linux systems. If you compile dogecoind/dogecoin-qt yourself, there are some useful files here.
 
 ### [Signing](/contrib/signing)
-PGP keys used for signing Dogecash [release](/doc/release-process.md) results.
+PGP keys used for signing dogd [release](/doc/release-process.md) results.
 
 ### [MacDeploy](/contrib/macdeploy) ###
 Scripts and notes for Mac builds.

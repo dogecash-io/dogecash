@@ -1,20 +1,20 @@
-# I2P support in Dogecash
+# I2P support in dogd
 
-It is possible to run Dogecash as an
+It is possible to run dogd as an
 [I2P (Invisible Internet Project)](https://en.wikipedia.org/wiki/I2P)
 service and connect to such services.
 
 This [glossary](https://geti2p.net/en/about/glossary) may be useful to get
 started with I2P terminology.
 
-## Run Dogecash with an I2P router (proxy)
+## Run dogd with an I2P router (proxy)
 
 A running I2P router (proxy) with [SAM](https://geti2p.net/en/docs/api/samv3)
 enabled is required (there is an [official one](https://geti2p.net) and
 [a few alternatives](https://en.wikipedia.org/wiki/I2P#Routers)). Notice the IP
 address and port the SAM proxy is listening to; usually, it is
 `127.0.0.1:7656`. Once it is up and running with SAM enabled, use the following
-Dogecash options:
+dogd options:
 
 ```
 -i2psam=<ip:port>
@@ -36,9 +36,9 @@ In a typical situation, this suffices:
 dogecoind -i2psam=127.0.0.1:7656
 ```
 
-The first time Dogecash connects to the I2P router, its I2P address (and
+The first time dogd connects to the I2P router, its I2P address (and
 corresponding private key) will be automatically generated and saved in a file
-named `i2p_private_key` in the Dogecash data directory.
+named `i2p_private_key` in the dogd data directory.
 
 ## Additional configuration options related to I2P
 
@@ -47,15 +47,15 @@ information in the debug log about your I2P configuration and connections. Run
 `dogecoin-cli help logging` for more information.
 
 It is possible to restrict outgoing connections in the usual way with
-`onlynet=i2p`. I2P support was added to Dogecash in version 22.0 (mid 2021)
+`onlynet=i2p`. I2P support was added to dogd in version 22.0 (mid 2021)
 and there may be fewer I2P peers than Tor or IP ones. Therefore, using
 `onlynet=i2p` alone (without other `onlynet=`) may make a node more susceptible
 to [Sybil attacks](https://en.bitcoin.it/wiki/Weaknesses#Sybil_attack). Use
 `dogecoin-cli -addrinfo` to see the number of I2P addresses known to your node.
 
-## I2P related information in Dogecash
+## I2P related information in dogd
 
-There are several ways to see your I2P address in Dogecash:
+There are several ways to see your I2P address in dogd:
 - in the debug log (grep for `AddLocal`, the I2P address ends in `.b32.i2p`)
 - in the output of the `getnetworkinfo` RPC in the "localaddresses" section
 - in the output of `dogecoin-cli -netinfo` peer connections dashboard
@@ -68,20 +68,20 @@ RPC.
 
 ## Compatibility
 
-Dogecash uses the [SAM v3.1](https://geti2p.net/en/docs/api/samv3) protocol
+dogd uses the [SAM v3.1](https://geti2p.net/en/docs/api/samv3) protocol
 to connect to the I2P network. Any I2P router that supports it can be used.
 
-## Ports in I2P and Dogecash
+## Ports in I2P and dogd
 
-Dogecash uses the [SAM v3.1](https://geti2p.net/en/docs/api/samv3)
+dogd uses the [SAM v3.1](https://geti2p.net/en/docs/api/samv3)
 protocol. One particularity of SAM v3.1 is that it does not support ports,
 unlike newer versions of SAM (v3.2 and up) that do support them and default the
 port numbers to 0. From the point of view of peers that use newer versions of
 SAM or other protocols that support ports, a SAM v3.1 peer is connecting to them
 on port 0, from source port 0.
 
-To allow future upgrades to newer versions of SAM, Dogecash sets its
+To allow future upgrades to newer versions of SAM, dogd sets its
 listening port to 0 when listening for incoming I2P connections and advertises
 its own I2P address with port 0. Furthermore, it will not attempt to connect to
 I2P addresses with a non-zero port number because with SAM v3.1 the destination
-port (`TO_PORT`) is always set to 0 and is not in the control of Dogecash.
+port (`TO_PORT`) is always set to 0 and is not in the control of dogd.

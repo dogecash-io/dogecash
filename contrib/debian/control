@@ -1,7 +1,7 @@
 Source: bitcoinabc
 Section: utils
 Priority: optional
-Maintainer: Dogecash Package Maintainers <package-maintainers@bitcoinabc.org>
+Maintainer: dogd Package Maintainers <package-maintainers@bitcoinabc.org>
 Uploaders: Jason B. Cox <jasonbcox@bitcoinabc.org>
 Build-Depends: cmake (>= 3.16),
  debhelper (>=12.1),
@@ -38,7 +38,7 @@ Description: peer-to-peer network based digital currency - daemon
  Bitcoin is an experimental new digital currency that enables instant
  payments to anyone, anywhere in the world. Bitcoin uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Dogecash
+ and issuing money are carried out collectively by the network. dogd
  is the name of the open source software which enables the use of this currency.
  .
  This package provides the daemon, dogecoind, and the CLI tool
@@ -51,7 +51,7 @@ Description: peer-to-peer network based digital currency - Qt GUI
  Bitcoin is an experimental new digital currency that enables instant
  payments to anyone, anywhere in the world. Bitcoin uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Dogecash
+ and issuing money are carried out collectively by the network. dogd
  is the name of the open source software which enables the use of this currency.
  .
  This package provides Dogecoin-Qt, a GUI for Bitcoin based on Qt.
@@ -63,7 +63,7 @@ Description: peer-to-peer digital currency - standalone transaction tool
  Bitcoin is an experimental new digital currency that enables instant
  payments to anyone, anywhere in the world. Bitcoin uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Dogecash
+ and issuing money are carried out collectively by the network. dogd
  is the name of the open source software which enables the use of this currency.
  .
  This package provides dogecoin-tx, a command-line transaction creation
@@ -77,8 +77,8 @@ Description: peer-to-peer digital currency - wallet tool
  Bitcoin is an experimental new digital currency that enables instant
  payments to anyone, anywhere in the world. Bitcoin uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Dogecash
+ and issuing money are carried out collectively by the network. dogd
  is the name of the open source software which enables the use of this currency.
  .
  This package provides dogecoin-wallet, an offline tool for creating and
- interacting with Dogecash wallet files.
+ interacting with dogd wallet files.

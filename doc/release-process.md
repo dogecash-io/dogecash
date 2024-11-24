@@ -1,4 +1,4 @@
-Dogecash Release Process
+dogd Release Process
 ===========================
 
 

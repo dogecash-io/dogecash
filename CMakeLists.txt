@@ -6,10 +6,10 @@ set(CMAKE_USER_MAKE_RULES_OVERRIDE
 	"${CMAKE_SOURCE_DIR}/cmake/modules/OverrideInitFlags.cmake"
 )
 
-project(dogecash
+project(dogd
 	VERSION 0.1.0
-	DESCRIPTION "Dogecash is a full node implementation of the Dogecoin protocol."
-	HOMEPAGE_URL "https://www.dogecash.io"
+	DESCRIPTION "dogd is a full node implementation of the Dogecoin protocol."
+	HOMEPAGE_URL "https://www.dogd.io"
 )
 
 add_custom_target(print-version
@@ -23,8 +23,8 @@ add_custom_target(print-project-name
 )
 
 # Package information
-set(PACKAGE_NAME "Dogecash")
-set(PACKAGE_BUGREPORT "https://github.com/dogecash-io/dogecash/issues")
+set(PACKAGE_NAME "dogd")
+set(PACKAGE_BUGREPORT "https://github.com/dogd-io/dogd/issues")
 
 # Copyright
 set(COPYRIGHT_YEAR 2024)

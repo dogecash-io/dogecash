@@ -91,7 +91,7 @@ class ABC_CmdLine_Test(BitcoinTestFramework):
         self.start_node(0, [f"-excessiveblocksize={2 * LEGACY_MAX_BLOCK_SIZE}"])
         self.check_excessive(2 * LEGACY_MAX_BLOCK_SIZE)
         # Check for EB correctness in the subver string
-        self.check_subversion(r"/Dogecash:.*\(EB2\.0; .*\)/")
+        self.check_subversion(r"/dogd:.*\(EB2\.0; .*\)/")
 
         self.log.info(
             "  Attempt to set below legacy limit of 1MB - try "

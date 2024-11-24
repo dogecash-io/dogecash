@@ -1,4 +1,4 @@
-Fuzz-testing Dogecash
+Fuzz-testing dogd
 ==========================
 
 A special test harness in `src/test/fuzz/` is provided for each fuzz target to
@@ -46,7 +46,7 @@ export AFLPATH=$PWD
 
 ### Instrumentation
 
-To build Dogecash using AFL instrumentation (this assumes that the
+To build dogd using AFL instrumentation (this assumes that the
 `AFLPATH` was set as above):
 ```
 mkdir -p buildFuzzer
@@ -131,7 +131,7 @@ This version has no support for the `lld` linker so you need to add
 
 Should you run into problems with the address sanitizer, it is possible you
 may need to run `cmake` with `-DCRYPTO_USE_ASM=OFF` to avoid errors with
-certain assembly code from Dogecash's code.
+certain assembly code from dogd's code.
 See [developer notes on sanitizers](developer-notes.md#sanitizers) for more
 information.
 

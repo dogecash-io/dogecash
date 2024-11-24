@@ -28,7 +28,7 @@ option(ENABLE_UPNP "Enable UPnP support" ON)
 option(START_WITH_UPNP "Make UPnP the default to map ports" OFF)
 option(ENABLE_NATPMP "Enable NAT-PMP support" ON)
 option(START_WITH_NATPMP "Make NAT-PMP the default to map ports" OFF)
-option(ENABLE_CLANG_TIDY "Enable clang-tidy checks for Dogecash" OFF)
+option(ENABLE_CLANG_TIDY "Enable clang-tidy checks for dogd" OFF)
 option(ENABLE_PROFILING "Select the profiling tool to use" OFF)
 option(ENABLE_TRACING "Enable eBPF user static defined tracepoints" OFF)
 
@@ -954,7 +954,7 @@ if(BUILD_BITCOIN_CHAINSTATE)
 		versionbits.cpp
 		warnings.cpp
 
-		# Dogecash specific dependencies that will not go away with Core backports
+		# dogd specific dependencies that will not go away with Core backports
 		addrdb.cpp   # via banman.cpp
 		addrman.cpp  # via net.cpp
 		banman.cpp   # via net.cpp

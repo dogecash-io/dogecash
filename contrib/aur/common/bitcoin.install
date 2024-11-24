@@ -35,7 +35,7 @@ _rmuser() {
 
 read -d '' bitcoin <<'EOI'
 
-Dogecash
+dogd
 ___________
 
 To start bitcoin-abc:
@@ -44,8 +44,8 @@ $ systemctl start bitcoin
 
 To communicate with bitcoin-abc as a normal user:
 
-$ mkdir -p ~/.dogecash
-$ cat > ~/.dogecash/dogecoin.conf <<'EOF'
+$ mkdir -p ~/.dogd
+$ cat > ~/.dogd/dogecoin.conf <<'EOF'
 rpcport=22555
 rpcuser=bitcoin
 rpcpassword=secret

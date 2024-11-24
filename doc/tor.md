@@ -1,13 +1,13 @@
 # TOR SUPPORT IN BITCOIN
 
-It is possible to run Dogecash as a Tor onion service, and connect to such services.
+It is possible to run dogd as a Tor onion service, and connect to such services.
 
 The following directions assume you have a Tor proxy running on port 9050. Many distributions default to having a SOCKS proxy listening on port 9050, but others may not. In particular, the Tor Browser Bundle defaults to listening on port 9150. See [Tor Project FAQ:TBBSocksPort](https://www.torproject.org/docs/faq.html.en#TBBSocksPort) for how to properly
 configure Tor.
 
-## How to see information about your Tor configuration via Dogecash
+## How to see information about your Tor configuration via dogd
 
-There are several ways to see your local onion address in Dogecash:
+There are several ways to see your local onion address in dogd:
 - in the debug log (grep for "tor:" or "AddLocal")
 - in the output of RPC `getnetworkinfo` in the "localaddresses" section
 - in the output of the CLI `-netinfo` peer connections dashboard
@@ -16,9 +16,9 @@ You may set the `-debug=tor` config logging option to have additional
 information in the debug log about your Tor configuration.
 
 
-## 1. Run Dogecash behind a Tor proxy
+## 1. Run dogd behind a Tor proxy
 
-The first step is running Dogecash behind a Tor proxy. This will already anonymize all
+The first step is running dogd behind a Tor proxy. This will already anonymize all
 outgoing connections, but more is possible.
 
 	-proxy=ip:port  Set the proxy server. If SOCKS5 is selected (default), this proxy
@@ -55,15 +55,15 @@ In a typical situation, this suffices to run behind a Tor proxy:
 
 	./dogecoind -proxy=127.0.0.1:9050
 
-## 2. Automatically create a Dogecash onion service
+## 2. Automatically create a dogd onion service
 
-Dogecash makes use of Tor's control socket API to create and destroy
+dogd makes use of Tor's control socket API to create and destroy
 ephemeral onion services programmatically. This means that if Tor is running and
-proper authentication has been configured, Dogecash automatically creates an
+proper authentication has been configured, dogd automatically creates an
 onion service to listen on. The goal is to increase the number of available
 onion nodes.
 
-This feature is enabled by default if Dogecash is listening (`-listen`) and
+This feature is enabled by default if dogd is listening (`-listen`) and
 it requires a Tor connection to work. It can be explicitly disabled with
 `-listenonion=0`. If it is not disabled, it can be configured using the
 `-torcontrol` and `-torpassword` settings.
@@ -147,7 +147,7 @@ Manual](https://2019.www.torproject.org/docs/tor-manual.html.en) for more
 details).
 
 
-## 3. Manually create a Dogecash onion service
+## 3. Manually create a dogd onion service
 
 You can also manually configure your node to be reachable from the Tor network.
 Add these lines to your `/etc/tor/torrc` (or equivalent config file):
@@ -206,7 +206,7 @@ for normal IPv4/IPv6 communication, use:
 
 ## 4. Privacy recommendations
 
-- Do not add anything but Dogecash ports to the onion service created in section 3.
+- Do not add anything but dogd ports to the onion service created in section 3.
   If you run a web service too, create a new onion service for that.
   Otherwise it is trivial to link them, which may reduce privacy. Onion
   services created automatically (as in section 2) always have only one port

@@ -420,7 +420,7 @@
 <context>
     <name>bitcoin-abc</name>
     <message>
-        <source>Dogecash</source>
+        <source>dogd</source>
         <translation>Биткойн ядро</translation>
     </message>
     </context>

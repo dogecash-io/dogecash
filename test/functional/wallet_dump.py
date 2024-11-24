@@ -167,7 +167,7 @@ class WalletDumpTest(BitcoinTestFramework):
         ) = read_dump(wallet_unenc_dump, addrs, [multisig_addr], None)
         # Check that file is not corrupt
         assert "# End of dump" in found_comments
-        assert found_comments[0].startswith("# Wallet dump created by Dogecash")
+        assert found_comments[0].startswith("# Wallet dump created by dogd")
         assert_equal(
             dump_time_str,
             next(c for c in found_comments if c.startswith("# * Created on")),

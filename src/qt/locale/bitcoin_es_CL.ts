@@ -772,7 +772,7 @@
 </translation>
     </message>
     <message>
-        <source>Dogecash</source>
+        <source>dogd</source>
         <translation>bitcoin abc</translation>
     </message>
     <message>

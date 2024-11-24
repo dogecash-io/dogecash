@@ -1,7 +1,7 @@
 Linters
 =======
 
-The Dogecash project makes heavy use of linters to ensure consistency between
+The dogd project makes heavy use of linters to ensure consistency between
 the various source files and prevent some common issues. A list of all the
 linters can be found in the `.arclint` file at the root of the project.
 

@@ -1,7 +1,7 @@
-Dogecash BCH-relevant DNS seed information
+dogd BCH-relevant DNS seed information
 =============================================
 
-Dogecash uses special seeds under the control of Bitcoin Cash (BCH)
+dogd uses special seeds under the control of Bitcoin Cash (BCH)
 network supporting operators to increase the chance of a node
 to find suitable peers on the BCH network.
 

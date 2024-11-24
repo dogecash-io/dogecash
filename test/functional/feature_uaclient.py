@@ -18,7 +18,7 @@ class UseragentTest(BitcoinTestFramework):
     def run_test(self):
         self.log.info("test -uaclientname and -uaclientversion")
         default_useragent = self.nodes[0].getnetworkinfo()["subversion"]
-        expected = "/Dogecash:"
+        expected = "/dogd:"
         assert_equal(default_useragent[: len(expected)], expected)
         default_version = default_useragent[default_useragent.index(":") + 1 :]
         default_version = default_version[: default_version.index("/")]
@@ -30,13 +30,13 @@ class UseragentTest(BitcoinTestFramework):
 
         self.restart_node(0, ["-uaclientversion=123.45"])
         foo_ua = self.nodes[0].getnetworkinfo()["subversion"]
-        expected = "/Dogecash:123.45"
+        expected = "/dogd:123.45"
         assert_equal(foo_ua[: len(expected)], expected)
 
         self.log.info("non-numeric version allowed (although not recommended in BIP14)")
         self.restart_node(0, ["-uaclientversion=Version Two"])
         foo_ua = self.nodes[0].getnetworkinfo()["subversion"]
-        expected = "/Dogecash:Version Two"
+        expected = "/dogd:Version Two"
         assert_equal(foo_ua[: len(expected)], expected)
 
         self.log.info("test -uaclient doesn't break -uacomment")

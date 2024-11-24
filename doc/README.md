@@ -1,11 +1,11 @@
-Dogecash
+dogd
 =====================
 
 Setup
 ---------------------
-Dogecash is a fork of Bitcoin Core, which is the original Bitcoin client and builds the backbone of the network. It downloads and, by default, stores the entire history of Bitcoin transactions, which requires a few hundred gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+dogd is a fork of Bitcoin Core, which is the original Bitcoin client and builds the backbone of the network. It downloads and, by default, stores the entire history of Bitcoin transactions, which requires a few hundred gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Dogecash, visit [bitcoinabc.org](https://download.bitcoinabc.org/).
+To download dogd, visit [bitcoinabc.org](https://download.bitcoinabc.org/).
 
 Verify
 ---------------------
@@ -45,7 +45,7 @@ the presence of those warnings should be heeded with extreme caution.
 
 Running
 ---------------------
-The following are some helpful notes on how to run Dogecash on your native platform.
+The following are some helpful notes on how to run dogd on your native platform.
 
 ### Unix
 
@@ -66,11 +66,11 @@ Drag bitcoin-abc to your applications folder, and then run bitcoin-abc.
 
 * See the documentation at the [Bitcoin Wiki](https://en.bitcoin.it/wiki/Main_Page)
 for help and more information.
-* Ask for help on the [Dogecash Subreddit](https://www.reddit.com/r/BitcoinABC/).
+* Ask for help on the [dogd Subreddit](https://www.reddit.com/r/BitcoinABC/).
 
 Building
 ---------------------
-The following are developer notes on how to build Dogecash on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build dogd on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [Dependencies](dependencies.md)
 - [macOS Build Notes](build-osx.md)
@@ -80,7 +80,7 @@ The following are developer notes on how to build Dogecash on your native platfo
 
 Development
 ---------------------
-The Dogecash repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The dogd repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Productivity Notes](productivity.md)

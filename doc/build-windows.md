@@ -1,12 +1,12 @@
 WINDOWS BUILD NOTES
 ====================
 
-Below are some notes on how to build Dogecash for Windows.
+Below are some notes on how to build dogd for Windows.
 
-The options known to work for building Dogecash on Windows are:
+The options known to work for building dogd on Windows are:
 
 * On Linux, using the [Mingw-w64](https://mingw-w64.org/doku.php) cross compiler tool chain. Debian Bullseye is recommended
-and is the platform used to build the Dogecash Windows release binaries.
+and is the platform used to build the dogd Windows release binaries.
 * On Windows, using [Windows
 Subsystem for Linux (WSL)](https://msdn.microsoft.com/commandline/wsl/about) and the Mingw-w64 cross compiler tool chain.
 
@@ -64,7 +64,7 @@ First, install the general dependencies:
     sudo apt upgrade
     sudo apt install autoconf automake build-essential bsdmainutils curl git libboost-dev libevent-dev libssl-dev libtool ninja-build pkg-config python3 python-pytest
 
-The cmake version packaged with Ubuntu Bionic is too old for building Building Dogecash.
+The cmake version packaged with Ubuntu Bionic is too old for building Building dogd.
 To install the latest version:
 
     sudo apt-get install apt-transport-https ca-certificates gnupg software-properties-common wget
@@ -104,7 +104,7 @@ Ubuntu Artful 17.10 <sup>[2](#footnote2)</sup> and later, including Ubuntu Bioni
 
 Once the toolchain is installed the build steps are common:
 
-Note that for WSL the Dogecash source path MUST be somewhere in the default mount file system, for
+Note that for WSL the dogd source path MUST be somewhere in the default mount file system, for
 example /usr/src/bitcoin-abc, AND not under /mnt/d/.
 This means you cannot use a directory that is located directly on the host Windows file system to perform the build.
 
@@ -152,5 +152,5 @@ something break.
 options to allow a choice between either posix or win32 threads. The default option is win32 threads which is the more
 efficient since it will result in binary code that links directly with the Windows kernel32.lib. Unfortunately, the headers
 required to support win32 threads conflict with some of the classes in the C++11 standard library, in particular std::mutex.
-It's not possible to build the Dogecash code using the win32 version of the Mingw-w64 cross compilers (at least not without
-modifying headers in the Dogecash source code).
+It's not possible to build the dogd code using the win32 version of the Mingw-w64 cross compilers (at least not without
+modifying headers in the dogd source code).

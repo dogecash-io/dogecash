@@ -99,10 +99,10 @@ if __name__ == "__main__":
     parser.add_argument(
         "--config",
         "-c",
-        default="~/.dogecash/dogecoin.conf",
+        default="~/.dogd/dogecoin.conf",
         help=(
             "Path to dogecoin.conf for RPC authentication arguments (rpcuser &"
-            " rpcpassword).\nDefault: ~/.dogecash/dogecoin.conf"
+            " rpcpassword).\nDefault: ~/.dogd/dogecoin.conf"
         ),
     )
     args = parser.parse_args()

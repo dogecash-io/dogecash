@@ -1,14 +1,14 @@
-Contributing to Dogecash
+Contributing to dogd
 ========================
 
-The Dogecash project welcomes contributors!
+The dogd project welcomes contributors!
 
-This guide is intended to help developers contribute effectively to Dogecash.
+This guide is intended to help developers contribute effectively to dogd.
 
 Communicating with Developers
 -----------------------------
 
-To get in contact with Dogecash developers, you can join the
+To get in contact with dogd developers, you can join the
 [eCash Development Telegram group](https://t.me/eCashDevelopment).
 The intent of this group is to facilitate development of Bitcoin ABC and other
 eCash node implementations. We welcome people who wish to participate.
@@ -24,10 +24,10 @@ It is not for:
 * Market discussion
 * Non-constructive criticism
 
-Dogecash Development Philosophy
+dogd Development Philosophy
 -------------------------------
 
-Dogecash aims for fast iteration and continuous integration.
+dogd aims for fast iteration and continuous integration.
 
 This means that there should be quick turnaround for patches to be proposed,
 reviewed, and committed. Changes should not sit in a queue for long.
@@ -59,7 +59,7 @@ quickly, it should be reverted, and re-applied later when it no longer breaks th
 top priority, more important than completing other tasks.
 - Automate as much as possible, and spend time on things only humans can do.
 
-Here are some handy links for development practices aligned with Dogecash:
+Here are some handy links for development practices aligned with dogd:
 
 - [Developer Notes](doc/developer-notes.md)
 - [Statement of Bitcoin ABC Values and Visions](https://archive.md/ulgFI)
@@ -84,7 +84,7 @@ Contributing to the node software
 ---------------------------------
 
 During submission of patches, arcanist will automatically run `arc lint` to
-enforce Dogecash code formatting standards, and often suggests changes.
+enforce dogd code formatting standards, and often suggests changes.
 If code formatting tools do not install automatically on your system, you
 will have to install the following:
 
@@ -140,7 +140,7 @@ to install `nodejs` with node version manager.
 Then:
 
 ```
-cd dogecash
+cd dogd
 [sudo] nvm install 20
 [sudo] npm install -g npm@latest
 [sudo] npm install -g prettier@2.6.0
@@ -151,7 +151,7 @@ Some repositories have a `.nvmrc` file which specifies the version of node expec
 For example, to work in Cashtab,
 
 ```
-cd dogecash/cashtab
+cd dogd/cashtab
 nvm use
 ```
 

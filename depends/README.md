@@ -24,7 +24,7 @@ Note that it will use all the CPU cores available on the machine by default.
 This behavior can be changed by setting the `JOBS` environment variable (see
 below).
 
-To use the dependencies for building Dogecash, you need to set the platform
+To use the dependencies for building dogd, you need to set the platform
 file to be used by `cmake`.
 The platform files are located under `cmake/platforms/`.
 For example, cross-building for macOS (run from the project root):
